@@ -1,0 +1,30 @@
+student_data = {"Name": ["Ayush", "kshitij", "Jake"], "Class": [12, 11, 10], "Height": [172, 170, 177], 
+                "Weight": [72, 68, 71], "PreferredSport": ["football", "cricket", "Chess"]}
+
+import pandas
+data = pandas.DataFrame(student_data)
+data.to_csv("student.csv")
+
+print(data)
+
+PreferredSport = [s for s in data["PreferredSport"]]
+print(PreferredSport)
+
+sports = "Chess"
+
+diet_plan = {"Agility": "high","speed": "high","strength": "maximum", 
+             "Sport": sports}
+print(diet_plan)
+
+if diet_plan["Sport"] == "football":
+    diet_plan["Agility"] = "high"
+    diet_plan["speed"] = "high"
+    diet_plan["strength"] = "high"
+if diet_plan["Sport"] == "cricket":
+    diet_plan["Agility"] = "high"
+    diet_plan["speed"] = "high"
+    diet_plan["strength"] = "high"
+if diet_plan["Sport"] == "Chess":
+    diet_plan["Agility"] = "high"
+    diet_plan["speed"] = "Low"
+    diet_plan["strength"] = "Low"
